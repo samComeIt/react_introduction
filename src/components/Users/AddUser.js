@@ -14,7 +14,7 @@ const AddUser = (props) => {
         if (+enteredAge < 1) { //ENTEREDAGE IS STRING, NOT INTEGER (TO BE SECURE, ADD '+' SO NEGATIVE NUMBER DOES NOT GO THROUGH THE VALIDATION)
             return;
         }
-        console.log(enteredUsername, enteredAge)
+        props.onAddUser(enteredUsername, enteredAge);
         setEnteredAge('');
         setEnteredUsername('');
     }
